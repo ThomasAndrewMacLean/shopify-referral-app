@@ -23,9 +23,8 @@ class MyApp extends App {
     console.log("env🔥", process.env);
     console.log("🔑🔑🔑customKey", process.env.NEXT_PUBLIC_customKey);
 
-    console.log("🔑🔑🔑", API_KEY);
     const config = {
-      apiKey: API_KEY,
+      apiKey: process.env.NEXT_PUBLIC_customKey,
       shopOrigin: Cookies.get("shopOrigin"),
       forceRedirect: true,
     };
