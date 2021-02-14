@@ -20,7 +20,7 @@ const client = new ApolloClient({
 class MyApp extends App {
   render() {
     const { Component, pageProps, shopOrigin } = this.props;
-
+    const apiKey = process.env.API_KEY
     console.log("🔑🔑🔑", apiKey);
     const config = {
       apiKey,
