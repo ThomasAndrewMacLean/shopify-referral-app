@@ -21,7 +21,7 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, shopOrigin } = this.props;
     console.log("env🔥", process.env);
-    console.log("🔑🔑🔑customKey", customKey);
+    console.log("🔑🔑🔑customKey", process.env.NEXT_PUBLIC_customKey);
 
     console.log("🔑🔑🔑", API_KEY);
     const config = {
