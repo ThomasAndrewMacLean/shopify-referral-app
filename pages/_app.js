@@ -25,7 +25,7 @@ class MyApp extends App {
 
     const config = {
       apiKey: process.env.NEXT_PUBLIC_customKey,
-      shopOrigin: Cookies.get("shopOrigin"),
+      shopOrigin: shopOrigin,
       forceRedirect: true,
     };
 
