@@ -4,7 +4,7 @@ import App from "next/app";
 import Head from "next/head";
 import { Provider } from "@shopify/app-bridge-react";
 import ClientRouter from "../components/ClientRouter";
-//import Cookies from "js-cookie";
+import Cookies from "js-cookie";
 
 import { AppProvider } from "@shopify/polaris";
 import "@shopify/polaris/dist/styles.css";
@@ -21,9 +21,10 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, shopOrigin } = this.props;
 
+    console.log("🔑🔑🔑", apiKey);
     const config = {
-      apiKey: process.env.API_KEY,
-      shopOrigin,
+      apiKey,
+      shopOrigin: Cookies.get("shopOrigin"),
       forceRedirect: true,
     };
 

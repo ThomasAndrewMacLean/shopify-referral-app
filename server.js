@@ -30,6 +30,7 @@ app.prepare().then(() => {
       afterAuth(ctx) {
         const urlParams = new URLSearchParams(ctx.request.url);
         const shop = urlParams.get("shop");
+        ctx.cookies.set("shopOrigin", shop, { httpOnly: false });
 
         ctx.redirect(`/?shop=${shop}`);
       },
