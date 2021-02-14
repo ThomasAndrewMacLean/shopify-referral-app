@@ -20,10 +20,10 @@ const client = new ApolloClient({
 class MyApp extends App {
   render() {
     const { Component, pageProps, shopOrigin } = this.props;
-    const apiKey = process.env.API_KEY
-    console.log("🔑🔑🔑", apiKey);
+   
+    console.log("🔑🔑🔑", API_KEY);
     const config = {
-      apiKey,
+      apiKey: API_KEY,
       shopOrigin: Cookies.get("shopOrigin"),
       forceRedirect: true,
     };
