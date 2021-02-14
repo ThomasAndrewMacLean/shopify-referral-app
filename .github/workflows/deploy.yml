@@ -15,6 +15,7 @@ jobs:
       PROJECT_ID: thomasmaclean
       RUN_REGION: europe-west1
       SERVICE_NAME: shopify-referral-app
+      SHOPIFY_API_KEY: ${{ secrets.SHOPIFY_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
