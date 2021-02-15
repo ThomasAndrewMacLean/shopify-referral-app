@@ -27,7 +27,6 @@ class AnnotatedLayout extends React.Component {
       const data = await resp.json();
       console.log(data);
       this.setState({ data });
-      alert(JSON.stringify(data));
     };
     return (
       <Page>
