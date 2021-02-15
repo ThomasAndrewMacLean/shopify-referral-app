@@ -21,6 +21,11 @@ class AnnotatedLayout extends React.Component {
     const contentStatus = enabled ? "Disable" : "Enable";
     const textStatus = enabled ? "enabled" : "disabled";
 
+    const getApiData = async () => {
+      const resp = await fetch("/api/store");
+      const data = await resp.json();
+      console.log(data);
+    };
     return (
       <Page>
         <Layout>
@@ -29,6 +34,7 @@ class AnnotatedLayout extends React.Component {
             description="Add a product to Sample App, it will automatically be discounted."
           >
             <Card sectioned>
+              <button onClick={getApiData}></button>
               <Form onSubmit={this.handleSubmit}>
                 <FormLayout>
                   <TextField
