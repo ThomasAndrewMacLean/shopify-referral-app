@@ -25,6 +25,7 @@ class AnnotatedLayout extends React.Component {
       const resp = await fetch("/api/store");
       const data = await resp.json();
       console.log(data);
+      alert(JSON.stringify(data));
     };
     return (
       <Page>
