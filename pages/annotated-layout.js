@@ -14,6 +14,7 @@ import {
 class AnnotatedLayout extends React.Component {
   state = {
     discount: "10%",
+    data: {},
   };
 
   render() {
@@ -25,6 +26,7 @@ class AnnotatedLayout extends React.Component {
       const resp = await fetch("/api/store");
       const data = await resp.json();
       console.log(data);
+      this.setState({ data });
       alert(JSON.stringify(data));
     };
     return (
@@ -35,7 +37,9 @@ class AnnotatedLayout extends React.Component {
             description="Add a product to Sample App, it will automatically be discounted."
           >
             <Card sectioned>
-              <button onClick={getApiData}></button>
+              <button onClick={getApiData}>
+                getNAME {this.state.data?.name}
+              </button>
               <Form onSubmit={this.handleSubmit}>
                 <FormLayout>
                   <TextField
